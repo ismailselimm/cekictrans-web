@@ -154,17 +154,19 @@ button, input, select, textarea { font: inherit; color: inherit; }
   display: inline-flex;
 }
 .nav__logo img { display: block; width: 44px; height: 44px; }
-.nav__wordmark { display: flex; flex-direction: column; line-height: 1; gap: 3px; }
+.nav__wordmark { display: flex; flex-direction: column; line-height: 1; gap: 10px; }
 .nav__name {
-  font-family: var(--ff-display);
-  font-size: 1.05rem;
-  letter-spacing: 0.01em;
+  font-family: var(--ff-serif);
+  font-weight: 600;
+  font-size: 1.35rem;
+  letter-spacing: -0.005em;
+  line-height: 1;
   color: var(--ink);
 }
 .nav__sub {
   font-family: var(--ff-mono);
   font-size: 9px;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--ink-70);
 }
@@ -501,7 +503,7 @@ section { position: relative; }
   font-family: var(--ff-display);
   font-weight: 400;
   font-size: clamp(2.2rem, 5vw, 4.2rem);
-  line-height: 1.22;
+  line-height: 1.34;
   letter-spacing: -0.005em;
   margin: 0;
   color: var(--ink);
@@ -803,6 +805,7 @@ section { position: relative; }
 }
 .service--lg { grid-column: span 3; }
 .service--md { grid-column: span 4; }
+.service--xl { grid-column: span 6; }
 .service:hover { background: var(--steel); }
 .service__num {
   display: block;
@@ -1259,19 +1262,20 @@ a.channel:hover .channel__value { color: var(--blood); }
   display: block;
 }
 .footer__name {
-  font-family: var(--ff-display);
-  font-size: 1.7rem;
-  letter-spacing: 0.005em;
-  line-height: 1.1;
-  padding-bottom: 0.08em;
+  font-family: var(--ff-serif);
+  font-weight: 600;
+  font-size: 2.1rem;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  color: var(--bone);
 }
 .footer__sub {
   font-family: var(--ff-mono);
   font-size: 10px;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: rgba(242, 239, 230, 0.6);
-  margin-top: 10px;
+  margin-top: 14px;
 }
 .footer__manifesto {
   text-align: right;
