@@ -78,7 +78,7 @@
     });
   });
 
-  // ----- Quote form: mailto handoff -----
+  // ----- Quote form: WhatsApp handoff -----
   const form = document.getElementById('quoteForm');
   if (form) {
     form.addEventListener('submit', (e) => {
@@ -88,38 +88,28 @@
 
       const name = get('name');
       const phone = get('phone');
-      const email = get('email');
-      const from = get('from');
-      const to = get('to');
-      const type = get('type');
-      const date = get('date');
-      const note = get('note');
-
       if (!name || !phone) {
         alert('Lütfen ad ve telefon bilgisini girin.');
         return;
       }
 
-      const subject = `Teklif Talebi — ${name} · ${to || 'Hat belirsiz'}`;
-      const body = [
-        'Yeni teklif talebi:',
+      const lines = [
+        'Merhaba, cekictrans.com üzerinden teklif talebim:',
         '',
         `Ad / Firma : ${name}`,
         `Telefon    : ${phone}`,
-        `E-posta    : ${email}`,
-        `Yükleme    : ${from}`,
-        `Varış      : ${to}`,
-        `Yük tipi   : ${type}`,
-        `Tarih      : ${date}`,
+        `E-posta    : ${get('email')}`,
+        `Yükleme    : ${get('from')}`,
+        `Varış      : ${get('to')}`,
+        `Yük tipi   : ${get('type')}`,
+        `Tarih      : ${get('date')}`,
         '',
         'Notlar:',
-        note,
-        '',
-        '— cekictrans.com'
-      ].join('\n');
+        get('note')
+      ];
 
-      const url = `mailto:operasyon@cekictrans.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      window.location.href = url;
+      const url = `https://wa.me/905333183554?text=${encodeURIComponent(lines.join('\n'))}`;
+      window.open(url, '_blank', 'noopener');
     });
   }
 
