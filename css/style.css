@@ -303,14 +303,20 @@ button, input, select, textarea { font: inherit; color: inherit; }
   margin: 0;
   font-family: var(--ff-display);
   font-weight: 400;
-  font-size: clamp(4.5rem, 16vw, 16rem);
-  line-height: 0.95;
-  letter-spacing: -0.02em;
+  font-size: clamp(4.5rem, 14vw, 14rem);
+  line-height: 1.0;
+  letter-spacing: -0.015em;
   color: var(--bone);
   text-transform: uppercase;
-  padding-bottom: 0.08em;
+  padding-top: 0.12em;
+  padding-bottom: 0.14em;
 }
-.hero__h1 .line { display: block; overflow: hidden; padding-bottom: 0.1em; }
+.hero__h1 .line {
+  display: block;
+  overflow: visible;
+  padding-top: 0.08em;
+  padding-bottom: 0.18em;
+}
 .hero__h1 .word {
   display: inline-block;
   animation: lineUp 1100ms cubic-bezier(.4,0,.1,1) both;
@@ -494,23 +500,24 @@ section { position: relative; }
 .section-h2 {
   font-family: var(--ff-display);
   font-weight: 400;
-  font-size: clamp(2.2rem, 5.2vw, 4.6rem);
-  line-height: 1.06;
-  letter-spacing: -0.015em;
+  font-size: clamp(2.2rem, 5vw, 4.2rem);
+  line-height: 1.22;
+  letter-spacing: -0.005em;
   margin: 0;
   color: var(--ink);
   text-transform: uppercase;
-  padding-bottom: 0.04em;
+  padding-top: 0.06em;
+  padding-bottom: 0.08em;
 }
 .section-h2 em {
   font-family: var(--ff-serif);
   font-style: italic;
   color: var(--blood);
   text-transform: none;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.005em;
   font-weight: 400;
-  padding-right: 0.08em;
-  padding-left: 0.04em;
+  padding-right: 0.12em;
+  padding-left: 0.06em;
 }
 .section-h2--light { color: var(--bone); }
 .section-h2--center { text-align: center; max-width: 24ch; margin: 0 auto; }
@@ -538,19 +545,21 @@ section { position: relative; }
 .manifesto__h2 {
   font-family: var(--ff-display);
   font-weight: 400;
-  font-size: clamp(2rem, 5vw, 4.2rem);
-  line-height: 1.12;
-  letter-spacing: -0.015em;
-  word-spacing: 0.03em;
+  font-size: clamp(2rem, 4.6vw, 3.8rem);
+  line-height: 1.22;
+  letter-spacing: -0.005em;
+  word-spacing: 0.04em;
   margin: 0 0 var(--space-6);
-  max-width: 24ch;
+  max-width: 26ch;
+  padding-top: 0.06em;
+  padding-bottom: 0.08em;
 }
 .manifesto__h2 em {
   font-family: var(--ff-serif);
   font-style: italic;
   color: var(--blood);
   font-weight: 400;
-  padding-inline: 0.06em;
+  padding-inline: 0.1em;
   margin-inline: -0.02em;
 }
 .manifesto__cols {
@@ -730,9 +739,11 @@ section { position: relative; }
   grid-area: name;
   font-family: var(--ff-display);
   font-size: 1.3rem;
+  line-height: 1.2;
   letter-spacing: 0.005em;
   text-transform: uppercase;
   color: var(--ink);
+  padding-bottom: 0.04em;
 }
 .route__cities {
   grid-area: cities;
@@ -804,11 +815,12 @@ section { position: relative; }
 .service__title {
   font-family: var(--ff-display);
   font-weight: 400;
-  font-size: clamp(1.4rem, 2.2vw, 1.9rem);
-  line-height: 1.15;
-  letter-spacing: 0;
+  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+  line-height: 1.25;
+  letter-spacing: 0.005em;
   margin: 0 0 1rem;
   text-transform: uppercase;
+  padding-bottom: 0.06em;
 }
 .service__title em {
   font-family: var(--ff-serif);
@@ -981,10 +993,12 @@ section { position: relative; }
 .reason h3 {
   font-family: var(--ff-display);
   font-weight: 400;
-  font-size: 1.45rem;
-  line-height: 1.1;
+  font-size: 1.4rem;
+  line-height: 1.22;
   margin: 0 0 0.75rem;
   text-transform: uppercase;
+  letter-spacing: 0.005em;
+  padding-bottom: 0.04em;
 }
 .reason p {
   margin: 0;
@@ -1069,8 +1083,10 @@ section { position: relative; }
   font-family: var(--ff-display);
   font-weight: 400;
   font-size: 1.25rem;
+  line-height: 1.2;
   text-transform: uppercase;
   margin: 0 0 0.6rem;
+  letter-spacing: 0.005em;
 }
 .step p {
   margin: 0;
@@ -1118,11 +1134,14 @@ section { position: relative; }
 .contact__h2 {
   font-family: var(--ff-display);
   font-weight: 400;
-  font-size: clamp(2.5rem, 6vw, 5rem);
-  line-height: 1.05;
+  font-size: clamp(2.4rem, 5.4vw, 4.4rem);
+  line-height: 1.2;
   margin: 0 0 1.5rem;
   text-transform: uppercase;
   color: var(--bone);
+  padding-top: 0.06em;
+  padding-bottom: 0.08em;
+  letter-spacing: -0.005em;
 }
 .contact__h2 em {
   font-family: var(--ff-serif);
@@ -1241,9 +1260,10 @@ a.channel:hover .channel__value { color: var(--blood); }
 }
 .footer__name {
   font-family: var(--ff-display);
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   letter-spacing: 0.005em;
-  line-height: 1;
+  line-height: 1.1;
+  padding-bottom: 0.08em;
 }
 .footer__sub {
   font-family: var(--ff-mono);
@@ -1251,7 +1271,7 @@ a.channel:hover .channel__value { color: var(--blood); }
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: rgba(242, 239, 230, 0.6);
-  margin-top: 4px;
+  margin-top: 10px;
 }
 .footer__manifesto {
   text-align: right;
@@ -1306,22 +1326,66 @@ a.channel:hover .channel__value { color: var(--blood); }
   text-transform: uppercase;
   color: rgba(242, 239, 230, 0.55);
 }
+
+/* Designer credit bar — dedicated row, single line, centered */
+.footer__credit-bar {
+  max-width: var(--maxw);
+  margin: var(--space-3) auto 0;
+  padding: var(--space-3) 0 var(--space-1);
+  border-top: 1px solid rgba(242, 239, 230, 0.08);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .footer__credit {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
   font-family: var(--ff-mono);
   font-size: 11px;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(242, 239, 230, 0.55);
+  color: rgba(242, 239, 230, 0.50);
+  white-space: nowrap;
+}
+.footer__credit-label {
+  position: relative;
+}
+.footer__credit-label::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--blood);
+  margin-right: 0.75rem;
+  vertical-align: middle;
+}
+.footer__credit-sep {
+  color: var(--blood);
+  font-weight: 600;
 }
 .footer__credit a {
-  color: rgba(242, 239, 230, 0.85);
-  border-bottom: 1px solid rgba(242, 239, 230, 0.25);
-  padding-bottom: 1px;
-  transition: color 200ms ease, border-color 200ms ease;
+  color: var(--bone);
+  letter-spacing: 0.18em;
+  border-bottom: 1px solid rgba(242, 239, 230, 0.20);
+  padding-bottom: 2px;
+  transition: color 200ms ease, border-color 200ms ease, letter-spacing 200ms ease;
 }
 .footer__credit a:hover {
   color: var(--blood);
   border-color: var(--blood);
+  letter-spacing: 0.22em;
+}
+@media (max-width: 540px) {
+  .footer__credit {
+    flex-wrap: wrap;
+    justify-content: center;
+    white-space: normal;
+    letter-spacing: 0.14em;
+    text-align: center;
+    gap: 0.4rem;
+  }
+  .footer__credit-label::before { display: none; }
 }
 
 /* ============================================================

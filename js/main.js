@@ -108,7 +108,7 @@
         get('note')
       ];
 
-      const url = `https://wa.me/905333183554?text=${encodeURIComponent(lines.join('\n'))}`;
+      const url = `https://wa.me/905338188554?text=${encodeURIComponent(lines.join('\n'))}`;
       window.open(url, '_blank', 'noopener');
     });
   }
