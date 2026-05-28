@@ -1358,6 +1358,72 @@ a.channel:hover .channel__value { color: var(--blood); }
 }
 
 /* ============================================================
+   WhatsApp floating button
+   ============================================================ */
+.whatsapp {
+  position: fixed;
+  right: clamp(1rem, 2.4vw, 1.75rem);
+  bottom: clamp(1rem, 2.4vw, 1.75rem);
+  z-index: 70;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.1rem 0.75rem 0.85rem;
+  background: #1FA855;
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  font-family: var(--ff-display);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  box-shadow:
+    0 10px 24px rgba(31, 168, 85, 0.32),
+    0 2px 6px rgba(10, 22, 50, 0.22);
+  transition: transform 220ms cubic-bezier(.4,0,.2,1), box-shadow 220ms ease, background 220ms ease;
+}
+.whatsapp::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 999px;
+  border: 2px solid rgba(31, 168, 85, 0.35);
+  animation: waPulse 2.4s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes waPulse {
+  0%   { transform: scale(1);   opacity: 0.9; }
+  70%  { transform: scale(1.18); opacity: 0; }
+  100% { transform: scale(1.18); opacity: 0; }
+}
+.whatsapp:hover {
+  transform: translateY(-2px);
+  background: #169448;
+  box-shadow:
+    0 14px 30px rgba(31, 168, 85, 0.38),
+    0 4px 10px rgba(10, 22, 50, 0.28);
+}
+.whatsapp__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}
+.whatsapp__label { white-space: nowrap; }
+
+@media (max-width: 540px) {
+  .whatsapp { padding: 0.7rem; }
+  .whatsapp__label { display: none; }
+  .whatsapp__icon { width: 26px; height: 26px; }
+}
+
+@media print {
+  .whatsapp { display: none !important; }
+}
+
+/* ============================================================
    Responsive
    ============================================================ */
 @media (max-width: 1080px) {
