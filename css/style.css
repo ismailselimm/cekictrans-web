@@ -1521,8 +1521,20 @@ a.channel:hover .channel__value { color: var(--blood); }
   .hero__corner--tr { grid-row: 1; }
   .hero__corner--tl { grid-row: 1; }
   .hero__sub { grid-column: 1; }
-  .hero__actions { grid-column: 1; justify-self: stretch; }
-  .hero__actions .btn { flex: 1; justify-content: center; }
+  .hero__actions {
+    grid-column: 1;
+    justify-self: stretch;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .hero__actions .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.85rem 1rem;
+    font-size: 13px;
+    letter-spacing: 0.02em;
+  }
+  .hero__actions .btn--ghost { font-size: 13px; }
 
   .manifesto__cols { grid-template-columns: 1fr; gap: 1rem; }
   .stats__grid { grid-template-columns: 1fr; }
