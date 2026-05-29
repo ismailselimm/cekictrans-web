@@ -1559,11 +1559,18 @@ a.channel:hover .channel__value { color: var(--blood); }
 }
 
 @media (max-width: 520px) {
-  /* Çok dar mobil ekranlarda topbar'ı sadeleştir */
-  .topbar__text,
+  /* Mobil topbar: telefon gizlenir, sadece koridor metni kalır */
+  .topbar__phone,
   .topbar__sep { display: none; }
-  .topbar__inner { justify-content: space-between; }
-  .topbar__phone { margin-left: 0; font-size: 11px; }
+  .topbar { font-size: 9px; }
+  .topbar__text {
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .topbar__inner { justify-content: flex-start; gap: 0.5rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
